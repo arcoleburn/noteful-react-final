@@ -4,6 +4,9 @@ import ApiContext from "../ApiContext";
 
 import './AddFolder.css'
 
+import PropTypes from 'prop-types'
+
+
 export default class AddFolder extends Component {
   static contextType = ApiContext;
 
@@ -75,4 +78,8 @@ export default class AddFolder extends Component {
       </div>
     );
   }
+}
+
+AddFolder.PropTypes ={
+  folderName: PropTypes.string.isRequired 
 }

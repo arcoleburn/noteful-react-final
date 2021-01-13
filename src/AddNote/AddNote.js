@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import './AddNote.css'
 import ApiContext from "../ApiContext";
+import PropTypes from 'prop-types'
+import AddFolder from "../AddFolder/AddFolder";
 
 class AddNote extends Component {
   static contextType = ApiContext;
@@ -106,3 +108,10 @@ class AddNote extends Component {
 }
 
 export default AddNote;
+
+AddNote.PropTypes ={
+  name: PropTypes.string.isRequired,
+  modified: PropTypes.string.isRequired,
+  folder_id: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+}
